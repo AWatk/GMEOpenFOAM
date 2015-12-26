@@ -1,0 +1,698 @@
+<?xml version="1.0"?>
+<!DOCTYPE paradigm SYSTEM "edf.dtd">
+
+<paradigm name="OpenFOAMPreProcessing" guid="{CD016B55-213A-4B6B-AD6F-10D9B37B5D24}" cdate="Wed Oct 07 19:23:01 2015" mdate="Wed Oct 07 19:23:01 2015" >
+
+	<comment></comment>
+
+	<author></author>
+
+	<folder name = "RootFolder" metaref = "1000"  subfolders = "Folder" rootobjects = "rhoSimpleFoamCase" >
+		<attrdef name="As" metaref = "1097" valuetype = "double" defvalue = "1.4792e-6">
+			<dispname>Transport - AS</dispname>
+		</attrdef>
+		<attrdef name="Cp" metaref = "1098" valuetype = "double" defvalue = "1005">
+			<dispname>Mixture - Cp</dispname>
+		</attrdef>
+		<attrdef name="Hf" metaref = "1099" valuetype = "double" defvalue = "0">
+			<dispname>Mixture - Hf</dispname>
+		</attrdef>
+		<attrdef name="RASModel" metaref = "1100" valuetype = "enum" defvalue = "kEpsilon">
+			<dispname>RAS Model</dispname>
+			<enumitem dispname = "kEpsilon" value = "kEpsilon"></enumitem>
+		</attrdef>
+		<attrdef name="Ts" metaref = "1101" valuetype = "double" defvalue = "116">
+			<dispname>Transport - Ts</dispname>
+		</attrdef>
+		<attrdef name="TurbulenceON" metaref = "1520" valuetype = "enum" defvalue = "on">
+			<dispname>Turbulence</dispname>
+			<enumitem dispname = "on" value = "on"></enumitem>
+			<enumitem dispname = "off" value = "off"></enumitem>
+		</attrdef>
+		<attrdef name="application" metaref = "1521" valuetype = "enum" defvalue = "rhoSimpleFoam">
+			<enumitem dispname = "rhoSimpleFoam" value = "rhoSimpleFoam"></enumitem>
+		</attrdef>
+		<attrdef name="energy" metaref = "1102" valuetype = "enum" defvalue = "sensibleInternalEnergy">
+			<dispname>Energy Model</dispname>
+			<enumitem dispname = "sensibleInternalEnergy" value = "sensibleInternalEnergy"></enumitem>
+		</attrdef>
+		<attrdef name="equationOfState" metaref = "1103" valuetype = "enum" defvalue = "perfectGas">
+			<dispname>Equation of State</dispname>
+			<enumitem dispname = "perfectGas" value = "perfectGas"></enumitem>
+		</attrdef>
+		<attrdef name="mixtureType" metaref = "1104" valuetype = "enum" defvalue = "pureMixture">
+			<dispname>Mixture Type</dispname>
+			<enumitem dispname = "pureMixture" value = "pureMixture"></enumitem>
+		</attrdef>
+		<attrdef name="molWeight" metaref = "1105" valuetype = "double" defvalue = "28.9">
+			<dispname>Specie - molWeight</dispname>
+		</attrdef>
+		<attrdef name="nMoles" metaref = "1106" valuetype = "double" defvalue = "1">
+			<dispname>Specie - # Moles</dispname>
+		</attrdef>
+		<attrdef name="patchName" metaref = "1188" valuetype = "string" defvalue = "">
+			<dispname>Boundary Name</dispname>
+		</attrdef>
+		<attrdef name="printCoefficients" metaref = "1522" valuetype = "enum" defvalue = "on">
+			<dispname>Print Coefficients?</dispname>
+			<enumitem dispname = "on" value = "on"></enumitem>
+			<enumitem dispname = "off" value = "off"></enumitem>
+		</attrdef>
+		<attrdef name="runTimeModifiable" metaref = "1524" valuetype = "enum" defvalue = "true">
+			<dispname>Runtime Modifiable?</dispname>
+			<enumitem dispname = "true" value = "true"></enumitem>
+			<enumitem dispname = "false" value = "false"></enumitem>
+		</attrdef>
+		<attrdef name="specie" metaref = "1107" valuetype = "enum" defvalue = "specie">
+			<dispname>Species</dispname>
+			<enumitem dispname = "specie" value = "specie"></enumitem>
+		</attrdef>
+		<attrdef name="thermo" metaref = "1108" valuetype = "enum" defvalue = "hConst">
+			<dispname>Thermodynamic Model</dispname>
+			<enumitem dispname = "hConst" value = "hConst"></enumitem>
+		</attrdef>
+		<attrdef name="thermoType" metaref = "1109" valuetype = "enum" defvalue = "hePsiThermo">
+			<dispname>Thermodynamic Type</dispname>
+			<enumitem dispname = "hePsiThermo" value = "hePsiThermo"></enumitem>
+		</attrdef>
+		<attrdef name="transportType" metaref = "1110" valuetype = "enum" defvalue = "sutherland">
+			<dispname>Transport Type</dispname>
+			<enumitem dispname = "sutherland" value = "sutherland"></enumitem>
+		</attrdef>
+		<attrdef name="writeCompression" metaref = "1523" valuetype = "enum" defvalue = "off">
+			<dispname>Write Compression</dispname>
+			<enumitem dispname = "off" value = "off"></enumitem>
+			<enumitem dispname = "on" value = "on"></enumitem>
+		</attrdef>
+		<atom name = "Boundary" metaref = "1225"  attributes = "inletValue patchName btype value">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="btype" metaref = "1514" valuetype = "enum" defvalue = "zeroGradient">
+				<dispname>Boundary Type</dispname>
+				<enumitem dispname = "zeroGradient" value = "zeroGradient"></enumitem>
+				<enumitem dispname = "fixedValue" value = "fixedValue"></enumitem>
+				<enumitem dispname = "inletOutlet" value = "inletOutlet"></enumitem>
+			</attrdef>
+			<attrdef name="inletValue" metaref = "1226" valuetype = "string" defvalue = "$internalField">
+				<dispname>Inlet Value</dispname>
+			</attrdef>
+			<attrdef name="patchName" metaref = "1307" valuetype = "string" defvalue = "">
+				<dispname>Boundary Name</dispname>
+			</attrdef>
+			<attrdef name="value" metaref = "1309" valuetype = "string" defvalue = "$internalField">
+				<dispname>Boundary Value</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "RProperties" metaref = "1488"  attributes = "RASModel TurbulenceON printCoefficients">
+				<regnode name = "namePosition" value ="4"></regnode>
+		</atom>
+		<atom name = "STL" metaref = "1025" >
+				<regnode name = "namePosition" value ="4"></regnode>
+		</atom>
+		<atom name = "TProperties" metaref = "1310"  attributes = "dimensions internalField">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="dimensions" metaref = "1311" viewable = "no" valuetype = "string" defvalue = "[0 0 0 1 0 0 0]">
+				<dispname>Unit Dimensions</dispname>
+			</attrdef>
+			<attrdef name="internalField" metaref = "1312" valuetype = "string" defvalue = "uniform 293">
+				<dispname>Internal Field</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "UBoundary" metaref = "1313"  attributes = "inletValue massFlowRate patchName btype value">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="btype" metaref = "1515" valuetype = "enum" defvalue = "fixedValue">
+				<dispname>Boundary Type</dispname>
+				<enumitem dispname = "fixedValue" value = "fixedValue"></enumitem>
+				<enumitem dispname = "flowRateInletVelocity" value = "flowRateInletVelocity"></enumitem>
+				<enumitem dispname = "inletOutlet" value = "inletOutlet"></enumitem>
+			</attrdef>
+			<attrdef name="inletValue" metaref = "1314" valuetype = "string" defvalue = "uniform (0 0 0)">
+				<dispname>Inlet Value</dispname>
+			</attrdef>
+			<attrdef name="massFlowRate" metaref = "1315" valuetype = "string" defvalue = "constant 0.1">
+				<dispname>Mass Flow Rate</dispname>
+			</attrdef>
+			<attrdef name="patchName" metaref = "1316" valuetype = "string" defvalue = "">
+				<dispname>Boundary Name</dispname>
+			</attrdef>
+			<attrdef name="value" metaref = "1318" valuetype = "string" defvalue = "uniform (0 0 0)">
+				<dispname>Boundary Value</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "UProperties" metaref = "1319"  attributes = "dimensions internalField">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="dimensions" metaref = "1320" viewable = "no" valuetype = "string" defvalue = "[0 1 -1 0 0 0 0]">
+				<dispname>Unit Dimensions</dispname>
+			</attrdef>
+			<attrdef name="internalField" metaref = "1321" valuetype = "string" defvalue = "uniform (0 0 0)">
+				<dispname>Internal Field</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "alphatBoundary" metaref = "1322"  attributes = "patchName btype value">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="btype" metaref = "1513" valuetype = "enum" defvalue = "compressible::alphatWallFunction">
+				<dispname>Boundary Type</dispname>
+				<enumitem dispname = "compressible::alphatWallFunction" value = "compressible::alphatWallFunction"></enumitem>
+				<enumitem dispname = "calculated" value = "calculated"></enumitem>
+			</attrdef>
+			<attrdef name="patchName" metaref = "1323" valuetype = "string" defvalue = "">
+				<dispname>Boundary Name</dispname>
+			</attrdef>
+			<attrdef name="value" metaref = "1325" valuetype = "string" defvalue = "uniform 0">
+				<dispname>Boundary Value</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "alphatProperties" metaref = "1326"  attributes = "dimensions internalField">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="dimensions" metaref = "1327" viewable = "no" valuetype = "string" defvalue = "[1 -1 -1 0 0 0 0]">
+				<dispname>Unit Dimensions</dispname>
+			</attrdef>
+			<attrdef name="internalField" metaref = "1328" valuetype = "string" defvalue = "uniform 0">
+				<dispname>Internal Field</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "controlDictProperties" metaref = "1329"  attributes = "application startFrom stopAt writeInterval graphFormat startTime purgeWrite timeFormat endTime writeFormat timePrecision runTimeModifiable writeCompression deltaT writePrecision writeControl">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="deltaT" metaref = "1330" valuetype = "integer" defvalue = "1">
+				<dispname>Delta T</dispname>
+			</attrdef>
+			<attrdef name="endTime" metaref = "1331" valuetype = "integer" defvalue = "100">
+				<dispname>End Time</dispname>
+			</attrdef>
+			<attrdef name="graphFormat" metaref = "1332" valuetype = "enum" defvalue = "raw">
+				<dispname>Graph Format</dispname>
+				<enumitem dispname = "raw" value = "raw"></enumitem>
+			</attrdef>
+			<attrdef name="purgeWrite" metaref = "1333" valuetype = "integer" defvalue = "">
+				<dispname>Purge Write</dispname>
+			</attrdef>
+			<attrdef name="startFrom" metaref = "1335" valuetype = "enum" defvalue = "startTime">
+				<dispname>Start From</dispname>
+				<enumitem dispname = "startTime" value = "startTime"></enumitem>
+			</attrdef>
+			<attrdef name="startTime" metaref = "1336" valuetype = "integer" defvalue = "0">
+				<dispname>Start Time</dispname>
+			</attrdef>
+			<attrdef name="stopAt" metaref = "1337" valuetype = "enum" defvalue = "endTime">
+				<dispname>Stop At</dispname>
+				<enumitem dispname = "endTime" value = "endTime"></enumitem>
+			</attrdef>
+			<attrdef name="timeFormat" metaref = "1338" valuetype = "enum" defvalue = "general">
+				<dispname>Time Format</dispname>
+				<enumitem dispname = "general" value = "general"></enumitem>
+			</attrdef>
+			<attrdef name="timePrecision" metaref = "1339" valuetype = "integer" defvalue = "6">
+				<dispname>Time Precision</dispname>
+			</attrdef>
+			<attrdef name="writeControl" metaref = "1341" valuetype = "enum" defvalue = "timeStep">
+				<dispname>Write Control</dispname>
+				<enumitem dispname = "timeStep" value = "timeStep"></enumitem>
+			</attrdef>
+			<attrdef name="writeFormat" metaref = "1342" valuetype = "enum" defvalue = "ascii">
+				<dispname>Write Format</dispname>
+				<enumitem dispname = "ascii" value = "ascii"></enumitem>
+			</attrdef>
+			<attrdef name="writeInterval" metaref = "1343" valuetype = "integer" defvalue = "10">
+				<dispname>Write Interval</dispname>
+			</attrdef>
+			<attrdef name="writePrecision" metaref = "1344" valuetype = "integer" defvalue = "6">
+				<dispname>Write Precision</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "epsilonBoundary" metaref = "1345"  attributes = "inletValue mixingLength patchName btype value">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="btype" metaref = "1516" valuetype = "enum" defvalue = "compressible::epsilonWallFunction">
+				<dispname>Boundary Type</dispname>
+				<enumitem dispname = "compressible::epsilonWallFunction" value = "compressible::epsilonWallFunction"></enumitem>
+				<enumitem dispname = "compressible::turbulentMixingLengthDissipationRateInlet" value = "compressible::turbulentMixingLengthDissipationRateInlet"></enumitem>
+				<enumitem dispname = "inletOutlet" value = "inletOutlet"></enumitem>
+			</attrdef>
+			<attrdef name="inletValue" metaref = "1346" valuetype = "string" defvalue = "uniform 200">
+				<dispname>Inlet Value</dispname>
+			</attrdef>
+			<attrdef name="mixingLength" metaref = "1347" valuetype = "double" defvalue = "0">
+				<dispname>Mixing Length</dispname>
+			</attrdef>
+			<attrdef name="patchName" metaref = "1348" valuetype = "string" defvalue = "">
+				<dispname>Boundary Name</dispname>
+			</attrdef>
+			<attrdef name="value" metaref = "1350" valuetype = "string" defvalue = "uniform 200">
+				<dispname>Boundary Value</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "epsilonProperties" metaref = "1351"  attributes = "dimensions internalField">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="dimensions" metaref = "1352" viewable = "no" valuetype = "string" defvalue = "[0 2 -3 0 0 0 0]">
+				<dispname>Unit Dimensions</dispname>
+			</attrdef>
+			<attrdef name="internalField" metaref = "1353" valuetype = "string" defvalue = "uniform 200">
+				<dispname>Internal Field</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "fvSchemesProperties" metaref = "1354"  attributes = "snGradSchemes ddtSchemes fluxRequired divSchemes gradSchemes interpolationSchemes laplacianSchemes">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="ddtSchemes" metaref = "1355" valuetype = "enum" defvalue = "steadyState">
+				<dispname>ddtScheme Default</dispname>
+				<enumitem dispname = "steadyState" value = "steadyState"></enumitem>
+			</attrdef>
+			<attrdef name="divSchemes" metaref = "1356" valuetype = "enum" defvalue = "bounded Gauss upwind">
+				<dispname>Divergence Scheme Default</dispname>
+				<enumitem dispname = "bounded Gauss upwind" value = "bounded Gauss upwind"></enumitem>
+			</attrdef>
+			<attrdef name="fluxRequired" metaref = "1357" valuetype = "enum" defvalue = "no">
+				<dispname>Flux Required</dispname>
+				<enumitem dispname = "no" value = "no"></enumitem>
+			</attrdef>
+			<attrdef name="gradSchemes" metaref = "1358" valuetype = "enum" defvalue = "Gauss linear">
+				<dispname>gradScheme Default</dispname>
+				<enumitem dispname = "Gauss linear" value = "Gauss linear"></enumitem>
+			</attrdef>
+			<attrdef name="interpolationSchemes" metaref = "1359" valuetype = "enum" defvalue = "linear">
+				<dispname>Interpolation Scheme Default</dispname>
+				<enumitem dispname = "linear" value = "linear"></enumitem>
+			</attrdef>
+			<attrdef name="laplacianSchemes" metaref = "1360" valuetype = "enum" defvalue = "Gauss linear corrected">
+				<dispname>Laplacian Scheme Default</dispname>
+				<enumitem dispname = "Gauss linear corrected" value = "Gauss linear corrected"></enumitem>
+			</attrdef>
+			<attrdef name="snGradSchemes" metaref = "1361" valuetype = "enum" defvalue = "corrected">
+				<dispname>Surface Norm Grad Scheme Default</dispname>
+				<enumitem dispname = "corrected" value = "corrected"></enumitem>
+			</attrdef>
+		</atom>
+		<atom name = "kBoundary" metaref = "1362"  attributes = "inletValue intensity patchName btype value">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="btype" metaref = "1517" valuetype = "enum" defvalue = "compressible::kqRWallFunction">
+				<dispname>Boundary Type</dispname>
+				<enumitem dispname = "compressible::kqRWallFunction" value = "compressible::kqRWallFunction"></enumitem>
+				<enumitem dispname = "turbulentIntensityKineticEnergyInlet" value = "turbulentIntensityKineticEnergyInlet"></enumitem>
+				<enumitem dispname = "inletOutlet" value = "inletOutlet"></enumitem>
+			</attrdef>
+			<attrdef name="inletValue" metaref = "1363" valuetype = "string" defvalue = "uniform 1">
+				<dispname>Inlet Value</dispname>
+			</attrdef>
+			<attrdef name="intensity" metaref = "1364" valuetype = "double" defvalue = "0">
+				<dispname>Intensity</dispname>
+			</attrdef>
+			<attrdef name="patchName" metaref = "1365" valuetype = "string" defvalue = "">
+				<dispname>Boundary Name</dispname>
+			</attrdef>
+			<attrdef name="value" metaref = "1367" valuetype = "string" defvalue = "uniform 1">
+				<dispname>Boundary Value</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "kProperties" metaref = "1368"  attributes = "dimensions internalField">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="dimensions" metaref = "1369" viewable = "no" valuetype = "string" defvalue = "[0 2 -2 0 0 0 0]">
+				<dispname>Unit Dimensions</dispname>
+			</attrdef>
+			<attrdef name="internalField" metaref = "1370" valuetype = "string" defvalue = "uniform 1">
+				<dispname>Internal Field</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "mutBoundary" metaref = "1371"  attributes = "patchName btype value">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="btype" metaref = "1518" valuetype = "enum" defvalue = "mutkWallFunction">
+				<dispname>Boundary Type</dispname>
+				<enumitem dispname = "mutkWallFunction" value = "mutkWallFunction"></enumitem>
+				<enumitem dispname = "calculated" value = "calculated"></enumitem>
+			</attrdef>
+			<attrdef name="patchName" metaref = "1372" valuetype = "string" defvalue = "">
+				<dispname>Boundary Name</dispname>
+			</attrdef>
+			<attrdef name="value" metaref = "1374" valuetype = "string" defvalue = "uniform 0">
+				<dispname>Boundary Value</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "mutProperties" metaref = "1375"  attributes = "dimensions internalField">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="dimensions" metaref = "1376" viewable = "no" valuetype = "string" defvalue = "[1 -1 -1 0 0 0 0]">
+				<dispname>Unit Dimensions</dispname>
+			</attrdef>
+			<attrdef name="internalField" metaref = "1377" valuetype = "string" defvalue = "uniform 0">
+				<dispname>Internal Field</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "pBoundary" metaref = "1378"  attributes = "patchName btype value">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="btype" metaref = "1519" valuetype = "enum" defvalue = "zeroGradient">
+				<dispname>Boundary Type</dispname>
+				<enumitem dispname = "zeroGradient" value = "zeroGradient"></enumitem>
+				<enumitem dispname = "fixedValue" value = "fixedValue"></enumitem>
+			</attrdef>
+			<attrdef name="value" metaref = "1380" valuetype = "string" defvalue = "$internalField">
+				<dispname>Boundary Value</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "pProperties" metaref = "1381"  attributes = "dimensions internalField">
+				<regnode name = "namePosition" value ="4"></regnode>
+			<attrdef name="dimensions" metaref = "1382" viewable = "no" valuetype = "string" defvalue = "[1 -1 -2 0 0 0 0]">
+				<dispname>Unit Dimensions</dispname>
+			</attrdef>
+			<attrdef name="internalField" metaref = "1383" valuetype = "string" defvalue = "uniform 1.0e5">
+				<dispname>Internal Field</dispname>
+			</attrdef>
+		</atom>
+		<atom name = "thermoProperties" metaref = "1493"  attributes = "nMoles mixtureType molWeight Cp thermoType transportType Hf thermo equationOfState As specie energy Ts">
+				<regnode name = "namePosition" value ="4"></regnode>
+		</atom>
+		<model name = "Geometry" metaref = "1034" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<role name = "STL" metaref = "1094" kind = "STL"></role>
+			<role name = "blockMesh" metaref = "1035" kind = "blockMesh"></role>
+			<aspect name = "Aspect" metaref = "1525" >
+				<part metaref = "1096" role = "STL" primary = "yes" linked = "no"></part>
+				<part metaref = "1037" role = "blockMesh" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "RASProperties" metaref = "1042" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidRASPropertiesPartCardinality1" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "RProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by RASProperties, has to match 1.</dispname>
+			</constraint>
+			<role name = "RProperties" metaref = "1490" kind = "RProperties"></role>
+			<aspect name = "Aspect" metaref = "1526" >
+				<part metaref = "1492" role = "RProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "T" metaref = "1250" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidTPartCardinality2" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "Boundary" ) -> size in
+                     (partCount >= 1)]]>
+				<dispname>Multiplicity of parts, which are contained by T, has to match 1..*.</dispname>
+			</constraint>
+			<constraint name="ValidTPartCardinality3" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "TProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by T, has to match 1.</dispname>
+			</constraint>
+			<role name = "Boundary" metaref = "1251" kind = "Boundary"></role>
+			<role name = "TProperties" metaref = "1401" kind = "TProperties"></role>
+			<aspect name = "Aspect" metaref = "1527" >
+				<part metaref = "1254" role = "Boundary" primary = "yes" linked = "no"></part>
+				<part metaref = "1403" role = "TProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "U" metaref = "1404" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidUPartCardinality4" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "UProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by U, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidUPartCardinality5" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "UBoundary" ) -> size in
+                     (partCount >= 1)]]>
+				<dispname>Multiplicity of parts, which are contained by U, has to match 1..*.</dispname>
+			</constraint>
+			<role name = "UBoundary" metaref = "1405" kind = "UBoundary"></role>
+			<role name = "UProperties" metaref = "1406" kind = "UProperties"></role>
+			<aspect name = "Aspect" metaref = "1528" >
+				<part metaref = "1408" role = "UBoundary" primary = "yes" linked = "no"></part>
+				<part metaref = "1409" role = "UProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "alphat" metaref = "1052" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidalphatPartCardinality6" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "alphatProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by alphat, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidalphatPartCardinality7" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "alphatBoundary" ) -> size in
+                     (partCount >= 1)]]>
+				<dispname>Multiplicity of parts, which are contained by alphat, has to match 1..*.</dispname>
+			</constraint>
+			<role name = "alphatBoundary" metaref = "1410" kind = "alphatBoundary"></role>
+			<role name = "alphatProperties" metaref = "1411" kind = "alphatProperties"></role>
+			<aspect name = "Aspect" metaref = "1529" >
+				<part metaref = "1413" role = "alphatBoundary" primary = "yes" linked = "no"></part>
+				<part metaref = "1414" role = "alphatProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "blockMesh" metaref = "1054" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<aspect name = "Aspect" metaref = "1530" >
+			</aspect>
+		</model>
+		<model name = "controlDict" metaref = "1268" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidcontrolDictPartCardinality8" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "controlDictProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by controlDict, has to match 1.</dispname>
+			</constraint>
+			<role name = "controlDictProperties" metaref = "1416" kind = "controlDictProperties"></role>
+			<aspect name = "Aspect" metaref = "1531" >
+				<part metaref = "1418" role = "controlDictProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "epsilon" metaref = "1272" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidepsilonPartCardinality10" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "epsilonProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by epsilon, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidepsilonPartCardinality9" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "epsilonBoundary" ) -> size in
+                     (partCount >= 1)]]>
+				<dispname>Multiplicity of parts, which are contained by epsilon, has to match 1..*.</dispname>
+			</constraint>
+			<role name = "epsilonBoundary" metaref = "1419" kind = "epsilonBoundary"></role>
+			<role name = "epsilonProperties" metaref = "1420" kind = "epsilonProperties"></role>
+			<aspect name = "Aspect" metaref = "1532" >
+				<part metaref = "1422" role = "epsilonBoundary" primary = "yes" linked = "no"></part>
+				<part metaref = "1423" role = "epsilonProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "fvSchemes" metaref = "1278" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidfvSchemesPartCardinality11" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "fvSchemesProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by fvSchemes, has to match 1.</dispname>
+			</constraint>
+			<role name = "fvSchemesProperties" metaref = "1424" kind = "fvSchemesProperties"></role>
+			<aspect name = "Aspect" metaref = "1533" >
+				<part metaref = "1426" role = "fvSchemesProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "k" metaref = "1286" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidkPartCardinality12" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "kBoundary" ) -> size in
+                     (partCount >= 1)]]>
+				<dispname>Multiplicity of parts, which are contained by k, has to match 1..*.</dispname>
+			</constraint>
+			<constraint name="ValidkPartCardinality13" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "kProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by k, has to match 1.</dispname>
+			</constraint>
+			<role name = "kBoundary" metaref = "1427" kind = "kBoundary"></role>
+			<role name = "kProperties" metaref = "1428" kind = "kProperties"></role>
+			<aspect name = "Aspect" metaref = "1534" >
+				<part metaref = "1430" role = "kBoundary" primary = "yes" linked = "no"></part>
+				<part metaref = "1431" role = "kProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "mut" metaref = "1292" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidmutPartCardinality14" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "mutBoundary" ) -> size in
+                     (partCount >= 1)]]>
+				<dispname>Multiplicity of parts, which are contained by mut, has to match 1..*.</dispname>
+			</constraint>
+			<constraint name="ValidmutPartCardinality15" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "mutProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by mut, has to match 1.</dispname>
+			</constraint>
+			<role name = "mutBoundary" metaref = "1432" kind = "mutBoundary"></role>
+			<role name = "mutProperties" metaref = "1433" kind = "mutProperties"></role>
+			<aspect name = "Aspect" metaref = "1535" >
+				<part metaref = "1435" role = "mutBoundary" primary = "yes" linked = "no"></part>
+				<part metaref = "1436" role = "mutProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "p" metaref = "1298" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidpPartCardinality16" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "pProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by p, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidpPartCardinality17" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "pBoundary" ) -> size in
+                     (partCount >= 1)]]>
+				<dispname>Multiplicity of parts, which are contained by p, has to match 1..*.</dispname>
+			</constraint>
+			<role name = "pBoundary" metaref = "1437" kind = "pBoundary"></role>
+			<role name = "pProperties" metaref = "1438" kind = "pProperties"></role>
+			<aspect name = "Aspect" metaref = "1536" >
+				<part metaref = "1440" role = "pBoundary" primary = "yes" linked = "no"></part>
+				<part metaref = "1441" role = "pProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "rhoSimpleFoamCase" metaref = "1151" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidrhoSimpleFoamCasePartCardinality18" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "Geometry" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamCase, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamCasePartCardinality19" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "rhoSimpleFoamDomainSettings" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamCase, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamCasePartCardinality20" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "rhoSimpleFoamInitialConditions" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamCase, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamCasePartCardinality21" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "rhoSimpleFoamCaseSettings" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamCase, has to match 1.</dispname>
+			</constraint>
+			<role name = "Geometry" metaref = "1069" kind = "Geometry"></role>
+			<role name = "rhoSimpleFoamCaseSettings" metaref = "1454" kind = "rhoSimpleFoamCaseSettings"></role>
+			<role name = "rhoSimpleFoamDomainSettings" metaref = "1455" kind = "rhoSimpleFoamDomainSettings"></role>
+			<role name = "rhoSimpleFoamInitialConditions" metaref = "1456" kind = "rhoSimpleFoamInitialConditions"></role>
+			<aspect name = "Aspect" metaref = "1537" >
+				<part metaref = "1074" role = "Geometry" primary = "yes" linked = "no"></part>
+				<part metaref = "1458" role = "rhoSimpleFoamCaseSettings" primary = "yes" linked = "no"></part>
+				<part metaref = "1459" role = "rhoSimpleFoamDomainSettings" primary = "yes" linked = "no"></part>
+				<part metaref = "1460" role = "rhoSimpleFoamInitialConditions" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "rhoSimpleFoamCaseSettings" metaref = "1461" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidrhoSimpleFoamCaseSettingsPartCardinality22" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "controlDict" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamCaseSettings, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamCaseSettingsPartCardinality23" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "fvSchemes" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamCaseSettings, has to match 1.</dispname>
+			</constraint>
+			<role name = "controlDict" metaref = "1462" kind = "controlDict"></role>
+			<role name = "fvSchemes" metaref = "1463" kind = "fvSchemes"></role>
+			<aspect name = "Aspect" metaref = "1538" >
+				<part metaref = "1465" role = "controlDict" primary = "yes" linked = "no"></part>
+				<part metaref = "1466" role = "fvSchemes" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "rhoSimpleFoamDomainSettings" metaref = "1467" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidrhoSimpleFoamDomainSettingsPartCardinality24" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "RASProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamDomainSettings, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamDomainSettingsPartCardinality25" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "thermophysicalProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamDomainSettings, has to match 1.</dispname>
+			</constraint>
+			<role name = "RASProperties" metaref = "1468" kind = "RASProperties"></role>
+			<role name = "thermophysicalProperties" metaref = "1469" kind = "thermophysicalProperties"></role>
+			<aspect name = "Aspect" metaref = "1539" >
+				<part metaref = "1471" role = "RASProperties" primary = "yes" linked = "no"></part>
+				<part metaref = "1472" role = "thermophysicalProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "rhoSimpleFoamInitialConditions" metaref = "1473" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidrhoSimpleFoamInitialConditionsPartCardinality26" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "epsilon" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamInitialConditions, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamInitialConditionsPartCardinality27" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "U" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamInitialConditions, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamInitialConditionsPartCardinality28" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "alphat" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamInitialConditions, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamInitialConditionsPartCardinality29" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "T" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamInitialConditions, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamInitialConditionsPartCardinality30" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "p" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamInitialConditions, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamInitialConditionsPartCardinality31" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "mut" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamInitialConditions, has to match 1.</dispname>
+			</constraint>
+			<constraint name="ValidrhoSimpleFoamInitialConditionsPartCardinality32" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "k" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by rhoSimpleFoamInitialConditions, has to match 1.</dispname>
+			</constraint>
+			<role name = "T" metaref = "1474" kind = "T"></role>
+			<role name = "U" metaref = "1475" kind = "U"></role>
+			<role name = "alphat" metaref = "1079" kind = "alphat"></role>
+			<role name = "epsilon" metaref = "1476" kind = "epsilon"></role>
+			<role name = "k" metaref = "1477" kind = "k"></role>
+			<role name = "mut" metaref = "1478" kind = "mut"></role>
+			<role name = "p" metaref = "1479" kind = "p"></role>
+			<aspect name = "Aspect" metaref = "1540" >
+				<part metaref = "1481" role = "T" primary = "yes" linked = "no"></part>
+				<part metaref = "1482" role = "U" primary = "yes" linked = "no"></part>
+				<part metaref = "1087" role = "alphat" primary = "yes" linked = "no"></part>
+				<part metaref = "1483" role = "epsilon" primary = "yes" linked = "no"></part>
+				<part metaref = "1484" role = "k" primary = "yes" linked = "no"></part>
+				<part metaref = "1485" role = "mut" primary = "yes" linked = "no"></part>
+				<part metaref = "1486" role = "p" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<model name = "thermophysicalProperties" metaref = "1127" >
+				<regnode name = "namePosition" value ="4"></regnode>
+				<regnode name = "isTypeInfoShown" value ="true"></regnode>
+			<constraint name="ValidthermophysicalPropertiesPartCardinality33" eventmask = "0x0" depth = "1" priority = "1">
+				<![CDATA[let partCount = self.parts( "thermoProperties" ) -> size in
+                     (partCount = 1)]]>
+				<dispname>Multiplicity of parts, which are contained by thermophysicalProperties, has to match 1.</dispname>
+			</constraint>
+			<role name = "thermoProperties" metaref = "1510" kind = "thermoProperties"></role>
+			<aspect name = "Aspect" metaref = "1541" >
+				<part metaref = "1512" role = "thermoProperties" primary = "yes" linked = "no"></part>
+			</aspect>
+		</model>
+		<folder name = "Folder" metaref = "1021"  subfolders = "Folder" rootobjects = "rhoSimpleFoamCase" >
+		</folder>
+	</folder>
+</paradigm>

@@ -1,0 +1,140 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 2.4.0-f0842aea0e77
+Exec   : snappyHexMesh -overwrite
+Date   : Sep 16 2015
+Time   : 18:17:38
+Host   : "vadl0"
+PID    : 18838
+Case   : /mirror/OpenFOAM/mpiu-2.4.0/run/tutorials/mesh/snappyHexMesh/simple_ramjet
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read mesh in = 17.9 s
+
+Overall mesh bounding box  : (-0.0127 -0.0127 -0.0127) (0.381 0.1143 0.1143)
+Relative tolerance         : 1e-06
+Absolute matching distance : 4.32733e-07
+
+Reading refinement surfaces.
+Read refinement surfaces in = 0.01 s
+
+Reading refinement shells.
+Read refinement shells in = 0 s
+
+Setting refinement level of surface to be consistent with shells.
+Checked shell refinement in = 0 s
+
+Reading features.
+Read features in = 0 s
+
+
+Determining initial surface intersections
+-----------------------------------------
+
+Edge intersection testing:
+    Number of edges             : 9070000
+    Number of edges to retest   : 9070000
+    Number of intersected edges : 85614
+Calculated surface intersections in = 16.67 s
+
+Initial mesh : cells:3000000  faces:9070000  points:3070501
+Cells per refinement level:
+    0	3000000
+
+Adding patches for surface regions
+----------------------------------
+
+Patch Type                Region                        
+----- ----                ------                        
+ramjet:
+
+1     wall                inlets                        
+2     wall                outlet                        
+3     wall                walls                         
+
+Added patches in = 0.19 s
+
+Selecting decompositionMethod none
+Layer thickness specified as final layer and expansion ratio.
+--> FOAM Warning : 
+    From function polyBoundaryMesh::patchSet(const wordReList&, const bool, const bool) const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 815
+    Cannot find any patch or group names matching Walls
+--> FOAM Warning : 
+    From function layerParameters::layerParameters(..)
+    in file autoHexMesh/autoHexMeshDriver/layerParameters/layerParameters.C at line 279
+    Reading "/mirror/OpenFOAM/mpiu-2.4.0/run/tutorials/mesh/snappyHexMesh/simple_ramjet/system/snappyHexMeshDict.addLayersControls.layers" from line 217 to line 225
+    Layer specification for Walls does not match any patch.
+Valid patches are 
+4
+(
+defaultFaces
+inlets
+outlet
+walls
+)
+
+--> FOAM Warning : 
+    From function polyBoundaryMesh::patchSet(const wordReList&, const bool, const bool) const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 815
+    Cannot find any patch or group names matching Inlet
+--> FOAM Warning : 
+    From function layerParameters::layerParameters(..)
+    in file autoHexMesh/autoHexMeshDriver/layerParameters/layerParameters.C at line 279
+    Reading "/mirror/OpenFOAM/mpiu-2.4.0/run/tutorials/mesh/snappyHexMesh/simple_ramjet/system/snappyHexMeshDict.addLayersControls.layers" from line 217 to line 225
+    Layer specification for Inlet does not match any patch.
+Valid patches are 
+4
+(
+defaultFaces
+inlets
+outlet
+walls
+)
+
+--> FOAM Warning : 
+    From function polyBoundaryMesh::patchSet(const wordReList&, const bool, const bool) const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 815
+    Cannot find any patch or group names matching Outlet
+--> FOAM Warning : 
+    From function layerParameters::layerParameters(..)
+    in file autoHexMesh/autoHexMeshDriver/layerParameters/layerParameters.C at line 279
+    Reading "/mirror/OpenFOAM/mpiu-2.4.0/run/tutorials/mesh/snappyHexMesh/simple_ramjet/system/snappyHexMeshDict.addLayersControls.layers" from line 217 to line 225
+    Layer specification for Outlet does not match any patch.
+Valid patches are 
+4
+(
+defaultFaces
+inlets
+outlet
+walls
+)
+
+
+Refinement phase
+----------------
+
+
+
+--> FOAM FATAL ERROR: 
+Point (0.5715 0.0635 0.0635) is not inside the mesh or on a face or edge.
+Bounding box of the mesh:(-0.0127 -0.0127 -0.0127) (0.381 0.1143 0.1143)
+
+    From function refinementParameters::findCells(const polyMesh&) const
+    in file autoHexMesh/autoHexMeshDriver/refinementParameters/refinementParameters.C at line 106.
+
+FOAM exiting
+

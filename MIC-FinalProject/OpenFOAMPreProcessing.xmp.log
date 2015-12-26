@@ -1,0 +1,23 @@
+==================================================================
+METAINTERPRETER LOG STARTED Wednesday, December 9, 2015 9:37:06 PM
+==================================================================
+Warning: Model "<A HREF="mga:id-0066-00000009">Geometry</A>" has no aspect defined and may contain: STL, CAD, blockMesh, UserDefinedGeometry
+Warning: Model "<A HREF="mga:id-0066-00000024">RASProperties</A>" has no aspect defined and may contain: RProperties
+Warning: Model "<A HREF="mga:id-0066-000000a8">T</A>" has no aspect defined and may contain: Boundary, TProperties
+Warning: Model "<A HREF="mga:id-0066-000000ad">U</A>" has no aspect defined and may contain: UProperties, UBoundary
+Warning: Model "<A HREF="mga:id-0066-00000010">alphat</A>" has no aspect defined and may contain: alphatProperties, alphatBoundary
+Warning: Model "<A HREF="mga:id-0066-0000004f">controlDict</A>" has no aspect defined and may contain: controlDictProperties
+Warning: Model "<A HREF="mga:id-0066-00000084">epsilon</A>" has no aspect defined and may contain: epsilonBoundary, epsilonProperties
+Warning: Model "<A HREF="mga:id-0066-00000051">fvSchemes</A>" has no aspect defined and may contain: fvSchemesProperties
+Warning: Model "<A HREF="mga:id-0066-00000087">k</A>" has no aspect defined and may contain: kBoundary, kProperties
+Warning: Model "<A HREF="mga:id-0066-00000094">mut</A>" has no aspect defined and may contain: mutBoundary, mutProperties
+Warning: Model "<A HREF="mga:id-0066-000000a0">p</A>" has no aspect defined and may contain: pProperties, pBoundary
+Warning: Model "<A HREF="mga:id-0066-00000002">rhoSimpleFoamCase</A>" has no aspect defined and may contain: Geometry, rhoSimpleFoamDomainSettings, rhoSimpleFoamInitialConditions, rhoSimpleFoamCaseSettings
+Warning: Model "<A HREF="mga:id-0066-0000004c">rhoSimpleFoamCaseSettings</A>" has no aspect defined and may contain: controlDict, fvSchemes
+Warning: Model "<A HREF="mga:id-0066-0000004b">rhoSimpleFoamDomainSettings</A>" has no aspect defined and may contain: RASProperties, thermophysicalProperties
+Warning: Model "<A HREF="mga:id-0066-0000004e">rhoSimpleFoamInitialConditions</A>" has no aspect defined and may contain: epsilon, U, alphat, T, p, mut, k
+Warning: Model "<A HREF="mga:id-0066-0000002e">thermophysicalProperties</A>" has no aspect defined and may contain: thermoProperties
+Note: Aspect mapping avoided. No user choice needed to be made.
+
+END OF LOG
+

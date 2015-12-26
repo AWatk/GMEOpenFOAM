@@ -1,0 +1,50 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2.4.0                                 |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       volScalarField;
+    location    "0";
+    object      $node.type.name;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+#for $child in $node.children()
+#if 'Properties' in $child.type.name
+dimensions      $child.dimensions;
+
+internalField   $child.internalField;
+
+#end if
+#end for
+boundaryField
+{
+#for $child in $node.children()
+#if 'Boundary' in $child.type.name
+	$child.patchName
+	{
+		type			$child.btype;
+#if 'inletOutlet' in $child.btype
+		inletValue		$child.inletValue;
+#end if
+#if 'compressible::turbulentMixingLengthDissipationRateInlet' in $child.btype
+		mixingLength	$child.mixingLength;
+#end if
+#if 'turbulentIntensityKineticEnergyInlet' in $child.btype
+		intensity		$child.intensity;
+#end if
+#if not ('zero' in '$child.btype')
+		value			$child.value;
+#end if
+	}
+#end if
+#end for
+}
+
+
+// ************************************************************************* //

@@ -1,0 +1,1508 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE project SYSTEM "mga.dtd">
+
+<project guid="{C113F9D6-2E60-4460-9F91-B5C721E6AE4A}" cdate="Fri Oct 09 17:08:11 2015" mdate="Fri Oct 09 17:08:11 2015" version="" metaguid="{0000590C-81D0-4A64-B703-A7F984BBEAD7}" metaversion="" metaname="OpenFOAMPreProcessing">
+	<name>RootFolder</name>
+	<comment></comment>
+	<author></author>
+	<folder id="id-006a-00000001" relid="0x1" childrelidcntr="0x6" kind="RootFolder" guid="{78f2dbc5-e2ba-439b-98bc-09398b27d8a5}">
+		<name>RootFolder</name>
+		<folder id="id-006a-00000002" relid="0x6" childrelidcntr="0x2" kind="Folder" guid="{3af69476-5e60-4a73-9422-bea873db1eba}">
+			<name>Folder</name>
+			<model id="id-0065-00000011" kind="rhoSimpleFoamCase" guid="{2475df19-27b4-438a-8f85-9761d0f3f445}" relid="0x1" childrelidcntr="0x4">
+				<name>AngledDuct</name>
+				<model id="id-0065-00000012" kind="Geometry" role="Geometry" guid="{b00536cb-69b4-49cb-b879-4f409d2feeb5}" relid="0x1" childrelidcntr="0x1">
+					<name>Geometry</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>154,70</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<model id="id-0065-00000016" kind="blockMesh" role="blockMesh" guid="{a9027735-9246-496b-afe7-e1d7a19e4dce}" relid="0x1" childrelidcntr="0x0">
+						<name>blockMesh</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>336,77</value>
+								</regnode>
+							</regnode>
+						</regnode>
+					</model>
+				</model>
+				<model id="id-0065-00000013" kind="rhoSimpleFoamCaseSettings" role="rhoSimpleFoamCaseSettings" guid="{8a78bcfb-8659-4b13-a6bb-ad77445f664c}" relid="0x2" childrelidcntr="0x2">
+					<name>rhoSimpleFoamCaseSettings</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>448,84</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<model id="id-0065-00000017" kind="controlDict" role="controlDict" guid="{b065b34c-9fc9-4e86-bb42-d8974c72d4e8}" relid="0x1" childrelidcntr="0x1">
+						<name>controlDict</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>91,98</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000014" kind="controlDictProperties" role="controlDictProperties" guid="{1374cd23-2024-4d05-995b-9ca3b6d6134a}" relid="0x1">
+							<name>controlDictProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>224,126</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="application" status="meta">
+								<value>rhoSimpleFoam</value>
+							</attribute>
+							<attribute kind="deltaT" status="meta">
+								<value>1</value>
+							</attribute>
+							<attribute kind="endTime">
+								<value>1000</value>
+							</attribute>
+							<attribute kind="graphFormat" status="meta">
+								<value>raw</value>
+							</attribute>
+							<attribute kind="purgeWrite" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="runTimeModifiable" status="meta">
+								<value>true</value>
+							</attribute>
+							<attribute kind="startFrom" status="meta">
+								<value>startTime</value>
+							</attribute>
+							<attribute kind="startTime" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="stopAt" status="meta">
+								<value>endTime</value>
+							</attribute>
+							<attribute kind="timeFormat" status="meta">
+								<value>general</value>
+							</attribute>
+							<attribute kind="timePrecision" status="meta">
+								<value>6</value>
+							</attribute>
+							<attribute kind="writeCompression" status="meta">
+								<value>off</value>
+							</attribute>
+							<attribute kind="writeControl" status="meta">
+								<value>timeStep</value>
+							</attribute>
+							<attribute kind="writeFormat" status="meta">
+								<value>ascii</value>
+							</attribute>
+							<attribute kind="writeInterval">
+								<value>100</value>
+							</attribute>
+							<attribute kind="writePrecision" status="meta">
+								<value>6</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-00000018" kind="fvSchemes" role="fvSchemes" guid="{bcc9147a-de38-484f-8ce5-186a71d5a35f}" relid="0x2" childrelidcntr="0x1">
+						<name>fvSchemes</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>462,119</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000015" kind="fvSchemesProperties" role="fvSchemesProperties" guid="{deaa3a4c-8dde-439a-8f46-d34b78821ce7}" relid="0x1">
+							<name>fvSchemesProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>294,105</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="ddtSchemes" status="meta">
+								<value>steadyState</value>
+							</attribute>
+							<attribute kind="divSchemes" status="meta">
+								<value>bounded Gauss upwind</value>
+							</attribute>
+							<attribute kind="fluxRequired" status="meta">
+								<value>no</value>
+							</attribute>
+							<attribute kind="gradSchemes" status="meta">
+								<value>Gauss linear</value>
+							</attribute>
+							<attribute kind="interpolationSchemes" status="meta">
+								<value>linear</value>
+							</attribute>
+							<attribute kind="laplacianSchemes" status="meta">
+								<value>Gauss linear corrected</value>
+							</attribute>
+							<attribute kind="snGradSchemes" status="meta">
+								<value>corrected</value>
+							</attribute>
+						</atom>
+					</model>
+				</model>
+				<model id="id-0065-00000014" kind="rhoSimpleFoamDomainSettings" role="rhoSimpleFoamDomainSettings" guid="{6d9b5af7-6f59-4fe2-9d7e-07b91cf05370}" relid="0x3" childrelidcntr="0x2">
+					<name>rhoSimpleFoamDomainSettings</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>651,147</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<model id="id-0065-00000019" kind="RASProperties" role="RASProperties" guid="{649b8cfb-5495-49fb-8d23-cb51ed968c6f}" relid="0x1" childrelidcntr="0x1">
+						<name>RASProperties</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>154,70</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000016" kind="RProperties" role="RProperties" guid="{18c575e6-1a6d-483e-aade-bc0085ee9c48}" relid="0x1">
+							<name>RProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>350,196</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="RASModel" status="meta">
+								<value>kEpsilon</value>
+							</attribute>
+							<attribute kind="TurbulenceON" status="meta">
+								<value>on</value>
+							</attribute>
+							<attribute kind="printCoefficients" status="meta">
+								<value>on</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-0000001a" kind="thermophysicalProperties" role="thermophysicalProperties" guid="{70f06b5e-28cd-4c20-b5ac-e0027c298072}" relid="0x2" childrelidcntr="0x1">
+						<name>thermophysicalProperties</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>567,119</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000017" kind="thermoProperties" role="thermoProperties" guid="{8852a583-b8cf-4e01-86fe-c9e139a68777}" relid="0x1">
+							<name>thermoProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>392,126</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="As" status="meta">
+								<value>1.4792e-006</value>
+							</attribute>
+							<attribute kind="Cp" status="meta">
+								<value>1005</value>
+							</attribute>
+							<attribute kind="Hf" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="Ts" status="meta">
+								<value>116</value>
+							</attribute>
+							<attribute kind="energy" status="meta">
+								<value>sensibleInternalEnergy</value>
+							</attribute>
+							<attribute kind="equationOfState" status="meta">
+								<value>perfectGas</value>
+							</attribute>
+							<attribute kind="mixtureType" status="meta">
+								<value>pureMixture</value>
+							</attribute>
+							<attribute kind="molWeight" status="meta">
+								<value>28.899999999999999</value>
+							</attribute>
+							<attribute kind="nMoles" status="meta">
+								<value>1</value>
+							</attribute>
+							<attribute kind="specie" status="meta">
+								<value>specie</value>
+							</attribute>
+							<attribute kind="thermo" status="meta">
+								<value>hConst</value>
+							</attribute>
+							<attribute kind="thermoType" status="meta">
+								<value>hePsiThermo</value>
+							</attribute>
+							<attribute kind="transportType" status="meta">
+								<value>sutherland</value>
+							</attribute>
+						</atom>
+					</model>
+				</model>
+				<model id="id-0065-00000015" kind="rhoSimpleFoamInitialConditions" role="rhoSimpleFoamInitialConditions" guid="{ba43fde2-d3e0-4750-adad-26db232d2f98}" relid="0x4" childrelidcntr="0x7">
+					<name>rhoSimpleFoamInitialConditions</name>
+					<regnode name="PartRegs" status="undefined">
+						<value></value>
+						<regnode name="Aspect" status="undefined">
+							<value></value>
+							<regnode name="Position" isopaque="yes">
+								<value>868,203</value>
+							</regnode>
+						</regnode>
+					</regnode>
+					<model id="id-0065-0000001b" kind="T" role="T" guid="{6abc30c3-ce07-4c28-9f84-6ec265c95d14}" relid="0x1" childrelidcntr="0x7">
+						<name>T</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>133,105</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000018" kind="Boundary" role="Boundary" guid="{8382db59-d77b-4262-88b9-502cf22fffcd}" relid="0x1">
+							<name>inlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>308,91</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>fixedValue</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>$internalField</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>inlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000019" kind="TProperties" role="TProperties" guid="{de850138-74a2-4caa-9011-b6c9da81a308}" relid="0x2">
+							<name>TProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>637,168</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="dimensions" status="meta">
+								<value>[0 0 0 1 0 0 0]</value>
+							</attribute>
+							<attribute kind="internalField" status="meta">
+								<value>uniform 293</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000026" kind="Boundary" role="Boundary" guid="{a7472c74-4bcf-4db4-a5ec-cc493bf2716a}" relid="0x3">
+							<name>outlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>301,196</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>inletOutlet</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>$internalField</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>outlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000027" kind="Boundary" role="Boundary" guid="{0232a2f3-b836-4957-b3a5-0672b4ec9b23}" relid="0x4">
+							<name>wall1</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>308,308</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>$internalField</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall1</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000034" kind="Boundary" role="Boundary" guid="{9d4aa8c6-dd3e-4470-acbc-911d554adac3}" relid="0x5">
+							<name>back</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>490,42</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>$internalField</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000035" kind="Boundary" role="Boundary" guid="{fa6c2622-0d3c-4231-91c4-c17b6b487da3}" relid="0x6">
+							<name>front</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>462,154</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>$internalField</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>front</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000036" kind="Boundary" role="Boundary" guid="{6d1f6a63-721d-4688-9b1f-d2cab68df266}" relid="0x7">
+							<name>wall2</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>322,406</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>$internalField</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall2</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-0000001c" kind="U" role="U" guid="{e802a4ef-0b48-4a30-aacb-5b763e55226a}" relid="0x2" childrelidcntr="0xa">
+						<name>U</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>294,84</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-0000001b" kind="UProperties" role="UProperties" guid="{a849dff9-6b35-4540-bf48-5a003a1ecc21}" relid="0x2">
+							<name>UProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>175,273</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="dimensions" status="meta">
+								<value>[0 1 -1 0 0 0 0]</value>
+							</attribute>
+							<attribute kind="internalField" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000037" kind="UBoundary" role="UBoundary" guid="{8e69a0af-8688-4502-8c64-2ded75d96d5a}" relid="0x5">
+							<name>front</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>70,126</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>fixedValue</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+							<attribute kind="massFlowRate" status="meta">
+								<value>constant 0.1</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000038" kind="UBoundary" role="UBoundary" guid="{6eae8db3-b930-44ab-b048-30bc8b4c000e}" relid="0x6">
+							<name>back</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>63,217</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>fixedValue</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+							<attribute kind="massFlowRate" status="meta">
+								<value>constant 0.1</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000039" kind="UBoundary" role="UBoundary" guid="{306d5ddc-e441-4f69-aee7-9e672a583136}" relid="0x7">
+							<name>wall1</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>49,294</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>fixedValue</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+							<attribute kind="massFlowRate" status="meta">
+								<value>constant 0.1</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall1</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000003a" kind="UBoundary" role="UBoundary" guid="{5268f7bb-6a1d-47ca-b4ef-f1de5b8d35d8}" relid="0x8">
+							<name>wall2</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>42,364</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>fixedValue</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+							<attribute kind="massFlowRate" status="meta">
+								<value>constant 0.1</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall2</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000003b" kind="UBoundary" role="UBoundary" guid="{3075d2ea-46ba-4496-8991-f8e7d2c3ba0e}" relid="0x9">
+							<name>inlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>56,448</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>flowRateInletVelocity</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+							<attribute kind="massFlowRate" status="meta">
+								<value>constant 0.1</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>inlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000003c" kind="UBoundary" role="UBoundary" guid="{e62b6097-abfc-47e2-8257-409940207587}" relid="0xa">
+							<name>outlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>70,525</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>inletOutlet</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+							<attribute kind="massFlowRate" status="meta">
+								<value>constant 0.1</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>outlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform (0 0 0)</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-0000001d" kind="alphat" role="alphat" guid="{a2ef3c96-1479-4f5e-b5f3-6d8aae0d7406}" relid="0x3" childrelidcntr="0xa">
+						<name>alphat</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>315,371</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-0000001d" kind="alphatProperties" role="alphatProperties" guid="{63ad67b1-4eb1-4797-86dc-207185d51b95}" relid="0x2">
+							<name>alphatProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>420,161</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="dimensions" status="meta">
+								<value>[1 -1 -1 0 0 0 0]</value>
+							</attribute>
+							<attribute kind="internalField" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000003d" kind="alphatBoundary" role="alphatBoundary" guid="{97fd307e-aca0-46f7-aded-bc3ba9cd5268}" relid="0x5">
+							<name>front</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>161,70</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::alphatWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>front</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000003e" kind="alphatBoundary" role="alphatBoundary" guid="{bfbd0cda-ac25-43f5-ad0e-c18bedd3e470}" relid="0x6">
+							<name>back</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>161,154</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::alphatWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000003f" kind="alphatBoundary" role="alphatBoundary" guid="{480a9186-d600-4d31-8070-a42b1670019c}" relid="0x7">
+							<name>wall1</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>147,238</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::alphatWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall1</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000040" kind="alphatBoundary" role="alphatBoundary" guid="{48b52629-b12b-46e5-bfe7-57ded88b698e}" relid="0x8">
+							<name>wall2</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>140,315</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::alphatWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall2</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000041" kind="alphatBoundary" role="alphatBoundary" guid="{525fed0c-265e-4c04-988a-03869533ff60}" relid="0x9">
+							<name>inlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>147,392</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>calculated</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>inlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000042" kind="alphatBoundary" role="alphatBoundary" guid="{c42e495f-2939-4470-8655-c5300c6ab65b}" relid="0xa">
+							<name>outlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>161,504</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>calculated</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>outlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-0000001e" kind="epsilon" role="epsilon" guid="{5c2417b9-b75b-4b23-b323-391b9f13198b}" relid="0x4" childrelidcntr="0xa">
+						<name>epsilon</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>903,224</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-0000001f" kind="epsilonProperties" role="epsilonProperties" guid="{fb28b81f-592f-4e18-bd04-b259b616e1e3}" relid="0x2">
+							<name>epsilonProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>441,175</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="dimensions" status="meta">
+								<value>[0 2 -3 0 0 0 0]</value>
+							</attribute>
+							<attribute kind="internalField" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000043" kind="epsilonBoundary" role="epsilonBoundary" guid="{5a471cc5-f663-4a01-b4bf-105999de9f0d}" relid="0x5">
+							<name>front</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>175,91</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::epsilonWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+							<attribute kind="mixingLength" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>front</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000044" kind="epsilonBoundary" role="epsilonBoundary" guid="{23ff0621-822c-4504-8c71-360e9168fe09}" relid="0x6">
+							<name>back</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>161,161</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::epsilonWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+							<attribute kind="mixingLength" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000045" kind="epsilonBoundary" role="epsilonBoundary" guid="{6fbb2984-74c3-402c-b5f3-f7e3139bdaa3}" relid="0x7">
+							<name>wall1</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>182,266</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::epsilonWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+							<attribute kind="mixingLength" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall1</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000046" kind="epsilonBoundary" role="epsilonBoundary" guid="{efdb9d8c-50c5-4384-a00c-2a2469814d89}" relid="0x8">
+							<name>wall2</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>175,343</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::epsilonWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+							<attribute kind="mixingLength" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall2</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000047" kind="epsilonBoundary" role="epsilonBoundary" guid="{91319d58-f661-48be-9728-9208466b02de}" relid="0x9">
+							<name>inlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>182,427</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>compressible::turbulentMixingLengthDissipationRateInlet</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+							<attribute kind="mixingLength">
+								<value>0.0050000000000000001</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>inlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000048" kind="epsilonBoundary" role="epsilonBoundary" guid="{bb105156-4c44-4bdc-883b-f23235b9e1f6}" relid="0xa">
+							<name>outlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>189,525</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>inletOutlet</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+							<attribute kind="mixingLength" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>outlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 200</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-0000001f" kind="k" role="k" guid="{ee81e75d-a52b-438e-92b4-bbc7088d5053}" relid="0x5" childrelidcntr="0xa">
+						<name>k</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>308,245</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000025" kind="kProperties" role="kProperties" guid="{1fd941a3-0cf5-4d8d-ab9b-43cae398df18}" relid="0x2">
+							<name>kProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>490,189</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="dimensions" status="meta">
+								<value>[0 2 -2 0 0 0 0]</value>
+							</attribute>
+							<attribute kind="internalField" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000049" kind="kBoundary" role="kBoundary" guid="{c877cc39-d5bf-42c0-8c7e-cb552771bb4a}" relid="0x5">
+							<name>front</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>273,126</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::kqRWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+							<attribute kind="intensity" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>front</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000004a" kind="kBoundary" role="kBoundary" guid="{5de7c65d-05b6-4026-a902-f6fb6fdcaae8}" relid="0x6">
+							<name>back</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>273,217</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::kqRWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+							<attribute kind="intensity" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000004b" kind="kBoundary" role="kBoundary" guid="{7135b56d-9f97-4044-85eb-e9643daa62aa}" relid="0x7">
+							<name>wall1</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>273,294</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::kqRWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+							<attribute kind="intensity" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall1</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000004c" kind="kBoundary" role="kBoundary" guid="{26e3457f-ffba-4907-9b2c-c7ac107f39ce}" relid="0x8">
+							<name>wall2</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>273,364</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::kqRWallFunction</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+							<attribute kind="intensity" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall2</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000004d" kind="kBoundary" role="kBoundary" guid="{5cc94931-30b7-42c9-9000-c7a9372b8fc1}" relid="0x9">
+							<name>inlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>273,448</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>turbulentIntensityKineticEnergyInlet</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+							<attribute kind="intensity">
+								<value>0.050000000000000003</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>inlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000004e" kind="kBoundary" role="kBoundary" guid="{e3d1da15-4c5e-4653-9379-0689939b476b}" relid="0xa">
+							<name>outlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>266,525</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>inletOutlet</value>
+							</attribute>
+							<attribute kind="inletValue" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+							<attribute kind="intensity" status="meta">
+								<value>0</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>outlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 1</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-00000020" kind="mut" role="mut" guid="{4b7451ac-cafe-4d5a-aad4-711b104ca7df}" relid="0x6" childrelidcntr="0xa">
+						<name>mut</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>112,371</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000023" kind="mutProperties" role="mutProperties" guid="{536a903d-09f8-4b41-b960-69d3596b0474}" relid="0x2">
+							<name>mutProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>413,175</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="dimensions" status="meta">
+								<value>[1 -1 -1 0 0 0 0]</value>
+							</attribute>
+							<attribute kind="internalField" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000004f" kind="mutBoundary" role="mutBoundary" guid="{223cbeb1-0a02-4da1-a1c1-ee5307ab74c4}" relid="0x5">
+							<name>outlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>231,469</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>calculated</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>outlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000050" kind="mutBoundary" role="mutBoundary" guid="{e40fefb6-bf25-4b19-a74f-d56cb6e331af}" relid="0x6">
+							<name>back</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>140,203</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::mutkWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000051" kind="mutBoundary" role="mutBoundary" guid="{f3714524-4afe-4053-88c5-54376b538b76}" relid="0x7">
+							<name>wall1</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>147,294</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::mutkWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall1</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000052" kind="mutBoundary" role="mutBoundary" guid="{0b43b0b4-2bb6-48e8-96b6-5abf478b5160}" relid="0x8">
+							<name>wall2</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>154,371</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::mutkWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall2</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000053" kind="mutBoundary" role="mutBoundary" guid="{bbe1c832-7b20-43cc-8a34-e070f50355fb}" relid="0x9">
+							<name>inlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>154,469</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>calculated</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>inlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000054" kind="mutBoundary" role="mutBoundary" guid="{917c1039-7690-4e36-8311-5c92e1f1f30f}" relid="0xa">
+							<name>front</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>154,546</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>compressible::mutkWallFunction</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>front</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>uniform 0</value>
+							</attribute>
+						</atom>
+					</model>
+					<model id="id-0065-00000021" kind="p" role="p" guid="{3e9cd065-3e8a-4dca-91e0-367724e5aef9}" relid="0x7" childrelidcntr="0xa">
+						<name>p</name>
+						<regnode name="PartRegs" status="undefined">
+							<value></value>
+							<regnode name="Aspect" status="undefined">
+								<value></value>
+								<regnode name="Position" isopaque="yes">
+									<value>91,245</value>
+								</regnode>
+							</regnode>
+						</regnode>
+						<atom id="id-0066-00000021" kind="pProperties" role="pProperties" guid="{2f594d2d-e7d5-4be6-8484-ce717a7d02c8}" relid="0x2">
+							<name>pProperties</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>462,196</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="dimensions" status="meta">
+								<value>[1 -1 -2 0 0 0 0]</value>
+							</attribute>
+							<attribute kind="internalField" status="meta">
+								<value>uniform 1.0e5</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000055" kind="pBoundary" role="pBoundary" guid="{e64398c8-687a-47c4-8583-9ab1d1c94ff3}" relid="0x5">
+							<name>front</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>203,98</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>front</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000056" kind="pBoundary" role="pBoundary" guid="{035920ef-fc41-4965-8ab6-04ba06e8c78a}" relid="0x6">
+							<name>back</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>203,175</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>back</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000057" kind="pBoundary" role="pBoundary" guid="{117fadd4-3f13-4913-bef9-76c9aaf12791}" relid="0x7">
+							<name>wall1</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>203,259</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall1</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000058" kind="pBoundary" role="pBoundary" guid="{09e5a7f4-e2f8-4234-8234-8c2fe89422c5}" relid="0x8">
+							<name>wall2</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>210,336</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>wall2</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-00000059" kind="pBoundary" role="pBoundary" guid="{bf76aabe-2ef7-4abd-8657-83e07ce5fa14}" relid="0x9">
+							<name>inlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>203,413</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype" status="meta">
+								<value>zeroGradient</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>inlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+						<atom id="id-0066-0000005a" kind="pBoundary" role="pBoundary" guid="{c10fad1d-1fde-4e82-a54a-b0937e7e3445}" relid="0xa">
+							<name>outlet</name>
+							<regnode name="PartRegs" status="undefined">
+								<value></value>
+								<regnode name="Aspect" status="undefined">
+									<value></value>
+									<regnode name="Position" isopaque="yes">
+										<value>203,504</value>
+									</regnode>
+								</regnode>
+							</regnode>
+							<attribute kind="btype">
+								<value>fixedValue</value>
+							</attribute>
+							<attribute kind="patchName">
+								<value>outlet</value>
+							</attribute>
+							<attribute kind="value" status="meta">
+								<value>$internalField</value>
+							</attribute>
+						</atom>
+					</model>
+				</model>
+			</model>
+		</folder>
+	</folder>
+</project>
